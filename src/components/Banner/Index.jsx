@@ -1,63 +1,33 @@
-import styled from "styled-components"
 
-const BannerSyle = styled.img `
-    width: 1400px;
-    height: 328px;
-    top: 192px;
-    left: 260px;
-    opacity: 80%;
+import { styled } from "styled-components"
+
+const FigureEstilizada = styled.figure`
+    background-image: url(/banner.png);
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    min-height: 328px;
+    margin: 0;
     border-radius: 20px;
+    max-width: 100%;
+    background-size: cover;
 `
 
-
-const TextoImg = styled.h1 `
-  position: absolute;
-  top: 30%;
-  left: 29%;
-  transform: translate(-50%, -50%);
-  color: #ffff;
-  font-size: 40px;
-  line-height: 48px;
-  font-weight: 400;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  white-space: pre-wrap;
-`
-
-const TextoImgQuebra = styled.h1 `
-    position: absolute;
-    top: 35%;
-    left: 28.3%;
-    transform: translate(-50%, -50%);
-    color: #ffff;
+const TituloEstilizado = styled.h1`
+    font-weight: 400;
     font-size: 40px;
     line-height: 48px;
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    white-space: pre-wrap;
-`
-const TextoImgQuebraLast = styled.h1 `
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    color: #ffff;
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    white-space: pre-wrap;
+    color: #FFFFFF;
+    max-width: 300px;
+    padding: 0 64px;
 `
 
-
-const Banner = () => {
-    return( 
-        <>
-        <BannerSyle src="/banner.png" ></BannerSyle>
-        <TextoImg>A galeria mais</TextoImg>
-        <TextoImgQuebra>completa de</TextoImgQuebra>
-        <TextoImgQuebraLast>fotos do espaço!</TextoImgQuebraLast>  
-        </>
-    )
+const Banner = ({texto}) => {
+    return (
+    <FigureEstilizada>
+        <TituloEstilizado>{texto}</TituloEstilizado>
+    </FigureEstilizada>)
 }
 
 export default Banner

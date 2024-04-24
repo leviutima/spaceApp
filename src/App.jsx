@@ -3,6 +3,7 @@ import EstilosGlobais from "./components/GlobalStyle/Index"
 import Header from "./components/Header/Index"
 import BarraLateral from "./components/BarraLateral/Index"
 import Banner from "./components/Banner/Index"
+import Galeria from "./components/Galeria/Index"
 
 
 const FundoGradiente = styled.div` 
@@ -10,11 +11,15 @@ const FundoGradiente = styled.div`
   width: 100%;
   min-height: 100vh;
 `
-const Section = styled.section `
-  display: flex;
-  gap: 150px;
+const AppContainer = styled.div `
+  margin: 0 auto;
+  width: 1700px;
+  max-width: 100%;
 `
-
+const Main = styled.div `
+  display: flex;
+  gap: 25px;
+`
 
 function App() {
 
@@ -23,11 +28,16 @@ function App() {
     <>
       <FundoGradiente>
         <EstilosGlobais />
+        <AppContainer>
           <Header/>
-          <Section>
+          <Main>
             <BarraLateral/>
-            <Banner/>
-          </Section>
+            <Banner
+                  texto={'A galeria mais completa de fotos do espaço!'}
+              />
+          </Main>
+          </AppContainer>
+          <Galeria/>
       </FundoGradiente>
     </>
   )
