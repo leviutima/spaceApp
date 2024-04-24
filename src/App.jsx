@@ -2,6 +2,7 @@ import styled from "styled-components"
 import EstilosGlobais from "./components/GlobalStyle/Index"
 import Header from "./components/Header/Index"
 import BarraLateral from "./components/BarraLateral/Index"
+import Banner from "./components/Banner/Index"
 
 
 const FundoGradiente = styled.div` 
@@ -9,7 +10,10 @@ const FundoGradiente = styled.div`
   width: 100%;
   min-height: 100vh;
 `
-
+const Section = styled.section `
+  display: flex;
+  gap: 150px;
+`
 
 
 function App() {
@@ -20,7 +24,10 @@ function App() {
       <FundoGradiente>
         <EstilosGlobais />
           <Header/>
-          <BarraLateral/>
+          <Section>
+            <BarraLateral/>
+            <Banner/>
+          </Section>
       </FundoGradiente>
     </>
   )
