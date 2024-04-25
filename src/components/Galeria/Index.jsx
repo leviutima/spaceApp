@@ -16,12 +16,11 @@ const SectionResponse = styled.section`
 
 const ImagensContainer = styled.section`
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
 `
 
-const Galeria = ({fotos = [], aoFotoSelecionada }) => {
+const Galeria = ({fotos = [], aoFotoSelecionada, aoAlternarFavorito }) => {
 
     return(
       <>
@@ -32,6 +31,7 @@ const Galeria = ({fotos = [], aoFotoSelecionada }) => {
             <ImagensContainer>
               {fotos.map( foto => <Imagens
                 aoZoomSolicitado={aoFotoSelecionada}
+                aoAlternarFavorito={aoAlternarFavorito}
                 key={foto.id}
                 fotos={foto}/>)
               }

@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import Imagens from "../Galeria/Imagens/Index"
+import BotaoIcone from "../BotaoIcone/Index"
+
 
 const OverLay = styled.div `
     background-color: rgba(0, 0, 0, 0.7);
@@ -13,20 +15,34 @@ const OverLay = styled.div `
 const DialogEstilizado = styled.dialog`
     position: absolute;
     top: 294px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    width: 1156px;
+    display: flex;
+    justify-content: center;
+    form {
+        button {
+            position: relative;
+            top: 20px;
+            right: 60px;
+        }
+    }
 `
 
 
-const ModalZoom = ({ fotos }) => {
+const ModalZoom = ({ fotos, aoFechar }) => {
     return(
         <>
             {fotos && <>
         <OverLay/>
-        <DialogEstilizado open = {!!fotos}>
+        <DialogEstilizado open = {!!fotos} onClose={aoFechar}>
             <Imagens fotos={fotos} expandida={true}/>
-            <p>Exemplo do Mozilla</p>
-                <form method="dialog">
-                    <button type="submit">ok</button>
-                </form>
+            <form method="dialog">
+                <BotaoIcone>
+                    <img src="/icones/fechar.png" alt='Icone de fechar'></img>
+                </BotaoIcone>
+            </form>
         </DialogEstilizado>
             </>}
         </>
