@@ -16,7 +16,7 @@ const HeaderEstilizado = styled.header `
 const Header  = () => {
     return (
         <HeaderEstilizado>
-            <img src="/images/Logo desktop e tablet.png"></img>
+            <img src="/imagens/Logo desktop e tablet.png"></img>
             <CampoTexto/>
         </HeaderEstilizado>
     )

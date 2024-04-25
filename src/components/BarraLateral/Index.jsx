@@ -1,56 +1,51 @@
-import styled from "styled-components"
+import { styled } from "styled-components"
 import ItemNavegacao from "./ItemNavegacao/Index"
 
-const ContainerList = styled.ul`
+
+const ListaEstilizada = styled.ul`
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 212px;
+    width: 236px;
 `
 
-
-
 const BarraLateral = () => {
-    return(
+    return (
         <aside>
             <nav>
-                <ContainerList>
+                <ListaEstilizada>
                     <ItemNavegacao
-                        iconeAtivo = '/icons/home-ativo.png'
-                        iconeInativo = '/icons/home-inativo.png'
-                        ativo = {true}
+                        iconeAtivo="/icones/home-ativo.png" 
+                        iconeInativo="/icones/home-inativo.png"
+                        ativo={true}
                     >
                         Início
                     </ItemNavegacao>
-                    <ItemNavegacao
-                        iconeAtivo = '/icons/mais-vistas-ativo.png'
-                        iconeInativo = '/icons/mais-vistas-inativo.png'
-                        ativo = {false}
-                    >
-                        Mais vistos
-                    </ItemNavegacao >
                     <ItemNavegacao 
-                        iconeAtivo = '/icons/mais-curtidas-ativo.png'
-                        iconeInativo = '/icons/mais-curtidas-inativo.png'
-                        ativo = {false}
+                        iconeAtivo="/icones/mais-vistas-ativo.png" 
+                        iconeInativo="/icones/mais-vistas-inativo.png"
+                    >
+                        Mais vistas
+                    </ItemNavegacao>
+                    <ItemNavegacao 
+                        iconeAtivo="/icones/mais-curtidas-ativo.png" 
+                        iconeInativo="/icones/mais-curtidas-inativo.png"
                     >
                         Mais curtidas
                     </ItemNavegacao>
                     <ItemNavegacao 
-                        iconeAtivo = '/icons/novas-ativo.png'
-                        iconeInativo = '/icons/novas-inativo.png'
-                        ativo = {false}
+                        iconeAtivo="/icones/novas-ativo.png" 
+                        iconeInativo="/icones/novas-inativo.png"
                     >
                         Novas
                     </ItemNavegacao>
-                    <ItemNavegacao 
-                        iconeAtivo = '/icons/surpreenda-me-ativo.png'
-                        iconeInativo = '/icons/surpreenda-me-inativo.png'
-                        ativo = {false}
+                    <ItemNavegacao
+                        iconeAtivo="/icones/surpreenda-me-ativo.png" 
+                        iconeInativo="/icones/surpreenda-me-inativo.png"
                     >
                         Surpreenda-me
                     </ItemNavegacao>
-                </ContainerList>
+                </ListaEstilizada>
             </nav>
         </aside>
     )
