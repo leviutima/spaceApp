@@ -7,7 +7,7 @@ import Imagens from "./Imagens/Index"
 
 const GaleriaContainer = styled.div`
     display: flex;
-    gap: 24px;
+    gap: 50px;
 `
 
 const SectionResponse = styled.section`
@@ -21,7 +21,7 @@ const ImagensContainer = styled.section`
     gap: 24px;
 `
 
-const Galeria = ({fotos = []}) => {
+const Galeria = ({fotos = [], aoFotoSelecionada }) => {
 
     return(
       <>
@@ -30,7 +30,8 @@ const Galeria = ({fotos = []}) => {
           <SectionResponse>
             <Titulo>Navegue pela galeria</Titulo>
             <ImagensContainer>
-              {fotos.map( foto => <Imagens 
+              {fotos.map( foto => <Imagens
+                aoZoomSolicitado={aoFotoSelecionada}
                 key={foto.id}
                 fotos={foto}/>)
               }
