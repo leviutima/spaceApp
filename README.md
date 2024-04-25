@@ -1,8 +1,5 @@
-# React + Vite
+<h1>PROJETO SPACE APP</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p>Esse projeto foi desenvolvido no curso da alura: React: estilize componentes com Styled Components e manipule arquivos estáticos</p>
+<p>Onde eu apliquei styled components, modals e JSX.</p>
+<p>A aplicação se baseia em um site de fotos espaciais dividos em tópicos, com funcionalidades como favoritar e expandir a imagem</p>
