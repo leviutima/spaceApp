@@ -21,6 +21,12 @@ const Main = styled.div `
   gap: 25px;
 `
 
+const SectionGaleria = styled.section `
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+`
+
 function App() {
 
 
@@ -32,12 +38,15 @@ function App() {
           <Header/>
           <Main>
             <BarraLateral/>
-            <Banner
+            <SectionGaleria>
+              <Banner
                   texto={'A galeria mais completa de fotos do espaço!'}
               />
+            <Galeria/>
+            </SectionGaleria>
           </Main>
           </AppContainer>
-          <Galeria/>
+          
       </FundoGradiente>
     </>
   )
